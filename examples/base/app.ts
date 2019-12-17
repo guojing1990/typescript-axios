@@ -36,14 +36,14 @@ import axios from '../../src/index'
 //   }
 // })
 
-// axios({
-//   method: 'get',
-//   url: '/base/get',
-//   params: {
-//     foo: 'bar',
-//     baz: null
-//   }
-// })
+axios({
+  method: 'get',
+  url: '/base/get',
+  params: {
+    foo: 'bar',
+    baz: null
+  }
+})
 
 // axios({
 //   method: 'get',
@@ -83,6 +83,7 @@ import axios from '../../src/index'
 axios({
   method: 'post',
   url: '/base/post',
+  dataType: 'json',
   data: {
     a: 1,
     b: 2
@@ -93,7 +94,8 @@ axios({
   method: 'post',
   url: '/base/post',
   headers: {
-    'content-type': 'application/json;'
+    'content-type': 'application/json;charset=utf-8',
+    'a-b': 'aaa'
   },
   data: {
     a: 1,
