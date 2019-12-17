@@ -80,34 +80,58 @@ axios({
 // })
 
 // 添加headers
+// axios({
+//   method: 'post',
+//   url: '/base/post',
+//   dataType: 'json',
+//   data: {
+//     a: 1,
+//     b: 2
+//   }
+// })
+
+// axios({
+//   method: 'post',
+//   url: '/base/post',
+//   headers: {
+//     'content-type': 'application/json;charset=utf-8',
+//     'a-b': 'aaa'
+//   },
+//   data: {
+//     a: 1,
+//     b: 2
+//   }
+// })
+
+// const paramsString = 'q=URLUtils.searchParams&topic=api'
+// const searchParams = new URLSearchParams(paramsString)
+
+// axios({
+//   method: 'post',
+//   url: '/base/post',
+//   data: searchParams
+// })
+
+//获取响应数据
 axios({
   method: 'post',
   url: '/base/post',
-  dataType: 'json',
   data: {
     a: 1,
     b: 2
   }
+}).then((res) => {
+  console.log(res)
 })
 
 axios({
   method: 'post',
   url: '/base/post',
-  headers: {
-    'content-type': 'application/json;charset=utf-8',
-    'a-b': 'aaa'
-  },
+  responseType: 'json',
   data: {
-    a: 1,
-    b: 2
+    a: 3,
+    b: 4
   }
-})
-
-const paramsString = 'q=URLUtils.searchParams&topic=api'
-const searchParams = new URLSearchParams(paramsString)
-
-axios({
-  method: 'post',
-  url: '/base/post',
-  data: searchParams
+}).then((res) => {
+  console.log(res)
 })
